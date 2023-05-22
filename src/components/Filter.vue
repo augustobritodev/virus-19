@@ -11,6 +11,6 @@ import IconSearch from '@/components/icons/IconSearch.vue'
       </div>
       <input class="text-base  flex-grow outline-none px-4 " type="text" placeholder="Digite o nome do país" />
     </div>
-    <div class="mx-5 border-b-2 w-full border-primary"></div>
+    <div class="mx-5 border-b-2  border-primary"></div>
   </div>
 </template>
