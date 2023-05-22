@@ -1,11 +1,16 @@
+<script setup lang="ts">
+import IconSearch from '@/components/icons/IconSearch.vue'
+</script>
+
 <template>
-  <div class="container mx-auto bg-gray-200 rounded-lg p-14">
-    <form>
-      <p class="text-center font-bold text-2xl">Filtrar dados sobre um país</p>
-      <div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between">
-        <button class="bg-primary text-base rounded-lg px-4 py-2 font-thin">Icon</button>
-        <input class="text-base flex-grow outline-none px-2 " type="text" placeholder="Digite o nome do país" />
+  <div class="mx-10 md:mx-120 lg:mx-60 bg-white border-2 rounded-md border-secondary p-10">
+    <p class="text-center font-bold text-xl">Filtrar dados sobre um país</p>
+    <div class="sm:flex items-center bg-white rounded overflow-hidden p-4 justify-between">
+      <div class="relative inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <IconSearch />
       </div>
-    </form>
+      <input class="text-base  flex-grow outline-none px-4 " type="text" placeholder="Digite o nome do país" />
+    </div>
+    <div class="mx-5 border-b-2 w-full border-primary"></div>
   </div>
 </template>

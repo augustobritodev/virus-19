@@ -13,7 +13,7 @@
           class="w-32 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-foreground ">
           Obter dados
         </a>
-        <a href="https://github.com/coodyme/covidy"
+        <a href="https://github.com/coodyme/covidy" target="_blank"
           class="w-32 inline-flex items-center justify-center px-5 py-3 my-2  sm:my-0 text-base font-medium text-center border border-foreground rounded-lg hover:bg-foreground hover:text-white">
           Contribua
         </a>
