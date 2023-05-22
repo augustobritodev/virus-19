@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <header class="bg-white shadow-md lg:px-20 py-5">
-    <nav>
-      <a href="#" class="flex items-center">
+  <header>
+    <nav class="bg-white shadow-md sm:px-20 py-5 ">
+      <a href="#" class="flex justify-center sm:justify-normal">
         <img alt="logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
       </a>
     </nav>
