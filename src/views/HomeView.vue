@@ -5,7 +5,7 @@ import Country from '@/components/Country.vue'
 </script>
 
 <template>
-  <main class="bg-gradient-to-b from-secondary to-white ">
+  <main class="bg-gradient-to-t from-secondary to-white ">
     <Hero />
     <Filter />
     <Country />
