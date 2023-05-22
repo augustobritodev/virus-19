@@ -9,5 +9,7 @@ import Country from '@/components/Country.vue'
     <Hero />
     <Filter />
     <Country />
+    <Country />
+    <Country />
   </main>
 </template>
