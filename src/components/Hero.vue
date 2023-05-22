@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const targetId = ref('search')
+
+const scrollToElement = () => {
+  const element = document.getElementById(targetId.value)
+  element?.scrollIntoView({ behavior: 'smooth' })
+}
+</script>
+
 <template>
   <section>
     <div class="px-10 sm:px-20 grid max-w-screen-xl py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -9,10 +20,10 @@
           tempo
           real o número de casos e óbitos relacionados a pandemia da COVID-19 ao redor do mundo.
         </p>
-        <a href="#"
+        <button @click='scrollToElement' href="#"
           class="w-32 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-foreground ">
           Obter dados
-        </a>
+        </button>
         <a href="https://github.com/coodyme/covidy" target="_blank"
           class="w-32 inline-flex items-center justify-center px-5 py-3 my-2  sm:my-0 text-base font-medium text-center border border-foreground rounded-lg hover:bg-foreground hover:text-white">
           Contribua
