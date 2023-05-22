@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import Navigation from './components/Navigation.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Covidy" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-  </header>
-  <RouterView />
+  <div class="text-foreground">
+    <Navigation></Navigation>
+    <RouterView />
+  </div>
 </template>
