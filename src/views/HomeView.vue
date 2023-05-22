@@ -4,6 +4,6 @@ import Hero from '../components/Hero.vue'
 
 <template>
   <main>
-    <Hero msg="teste" />
+    <Hero />
   </main>
 </template>
