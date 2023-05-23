@@ -18,16 +18,16 @@ const props = defineProps({
       <dl class="grid grid-cols-1 grid-rows-3 py-4 md:grid-cols-3 md:grid-rows-1">
         <div class="flex flex-col">
           <dd>Total de casos</dd>
-          <dt class="text-primary mb-2 text-3xl font-bold">{{ formatNumber(props?.item?.infected) }}</dt>
+          <dt class="text-primary mb-2 text-3xl font-bold">{{ formatNumber(Number(props?.item?.infected)) }}</dt>
         </div>
         <div class="flex flex-col">
           <dd>Mortes</dd>
-          <dt class="text-primary mb-2 text-3xl font-bold">{{ formatNumber(props?.item?.deceased) }}</dt>
+          <dt class="text-primary mb-2 text-3xl font-bold">{{ formatNumber(Number(props?.item?.deceased)) }}</dt>
         </div>
         <div class="flex flex-col">
           <dd>Fatalidade</dd>
           <dt class="text-primary mb-2 text-3xl font-bold">
-            {{ percent(props?.item?.deceased, props?.item?.infected) }}
+            {{ percent(Number(props?.item?.deceased), Number(props?.item?.infected)) }}
           </dt>
         </div>
       </dl>
