@@ -29,9 +29,10 @@ onMounted(() => {
 const filtered = computed(() => {
   if (filterInputValue.value != '' && filterInputValue.value) {
     return items.value.filter((item: Data) => {
+      console.log(filterInputValue.value)
       return item.country
-        .toLowerCase()
-        .includes(filterInputValue.value.toLowerCase())
+        ?.toLowerCase()
+        .includes(filterInputValue.value?.toLowerCase())
     })
   }
   return items.value

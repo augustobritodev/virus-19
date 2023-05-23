@@ -20,11 +20,11 @@ const scrollToElement = () => {
           tempo
           real o número de casos e óbitos relacionados a pandemia da COVID-19 ao redor do mundo.
         </p>
-        <button @click='scrollToElement' href="#"
+        <button id="btn-scroll" @click='scrollToElement' href="#"
           class="w-32 inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-foreground ">
           Obter dados
         </button>
-        <a href="https://github.com/coodyme/covidy" target="_blank"
+        <a id="btn-github" href="https://github.com/coodyme/covidy" target="_blank"
           class="w-32 inline-flex items-center justify-center px-5 py-3 my-2  sm:my-0 text-base font-medium text-center border border-foreground rounded-lg hover:bg-foreground hover:text-white">
           Contribua
         </a>
