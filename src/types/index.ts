@@ -11,6 +11,7 @@ export type Data = {
 }
 
 export type MoreData = {
+  country: string,
   infected: null | string | number,
   deceased: null | string | number,
   recovered: null | string | number,

@@ -1,5 +1,11 @@
-<template>
-  <div class="h-screen">
+<script setup lang="ts" >
+import AsyncCountryView from '@/views/AsyncCountryView.vue'
+</script>
 
-  </div>
+<template>
+  <Suspense>
+    <template #default>
+      <AsyncCountryView />
+    </template>
+  </Suspense>
 </template>
