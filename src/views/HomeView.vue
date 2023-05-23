@@ -5,7 +5,6 @@ import { ref, onMounted } from 'vue';
 import Hero from '@/components/Hero.vue'
 import Filter from '@/components/Filter.vue'
 import Country from '@/components/Country.vue'
-import Footer from '@/components/Footer.vue'
 
 import { type Data } from '@/types'
 
@@ -30,7 +29,7 @@ onMounted(() => {
 <template>
   <main class="min-h-screen bg-gradient-to-t from-secondary to-white ">
     <Hero />
-    <Filter />
+    <Filter :items="items" />
     <p class="p-20 text-center text-primary text-2xl" v-if="error">
       Desculpe, ocorreu um erro ao carregar os dados.
     </p>
@@ -39,6 +38,5 @@ onMounted(() => {
         <Country :item="item" />
       </li>
     </template>
-    <Footer />
   </main>
 </template>

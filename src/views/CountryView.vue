@@ -1,3 +1,5 @@
 <template>
-  <h1>Country View</h1>
+  <div class="h-screen">
+
+  </div>
 </template>

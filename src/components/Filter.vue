@@ -1,5 +1,32 @@
 <script setup lang="ts">
 import IconSearch from '@/components/icons/IconSearch.vue'
+
+import { type Data } from '@/types'
+import { computed, ref, defineExpose } from 'vue';
+
+const props = defineProps({
+  items: {
+    type: Array<Data>,
+    required: true
+  }
+})
+
+const searchQuery = ref<string>('')
+const filtered = ref<Data[]>([])
+
+const filter = () => {
+  if (!props.items) return undefined
+  if (searchQuery.value != '' && searchQuery.value) {
+    filtered.value = props.items.filter((item: Data) => {
+      return item.country
+        .toUpperCase()
+        .includes(searchQuery.value.toUpperCase())
+    })
+  }
+  return undefined
+}
+
+
 </script>
 
 <template>
@@ -9,7 +36,8 @@ import IconSearch from '@/components/icons/IconSearch.vue'
       <div class="invisible sm:visible relative inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <IconSearch />
       </div>
-      <input class="text-base  flex-grow outline-none px-4 " type="text" placeholder="Digite o nome do país" />
+      <input v-model='searchQuery' @input="filter" class="text-base  flex-grow outline-none px-4 " type="text"
+        placeholder="Digite o nome do país" />
     </div>
     <div class="mx-5 border-b-2  border-primary"></div>
   </div>

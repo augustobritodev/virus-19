@@ -1,5 +1,5 @@
 export type Data = {
-  infected: null | string | number,
+  infected: number,
   tested: null | string | number,
   recovered: null | string | number,
   deceased: null | string | number,
