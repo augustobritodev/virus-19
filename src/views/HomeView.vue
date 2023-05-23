@@ -43,7 +43,6 @@ const filtered = computed(() => {
   <main class="min-h-screen bg-gradient-to-t from-secondary to-white ">
     <Hero />
     <Filter @change="(msg: string) => filterInputValue = msg" />
-    <p>{{ filtered?.value }}</p>
     <p class="p-20 text-center text-primary text-2xl" v-if="error">
       Desculpe, ocorreu um erro ao carregar os dados.
     </p>
