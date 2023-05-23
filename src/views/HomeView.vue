@@ -37,14 +37,26 @@ const filtered = computed(() => {
   return items.value
 })
 
+const orderByTotalCases = () => {
+  items.value.sort((a: Data, b: Data) => {
+    return Number(b.infected) - Number(a.infected)
+  })
+}
+
 </script>
 
 <template>
   <main class="min-h-screen bg-gradient-to-t from-secondary to-white ">
     <Hero />
     <Filter @change="(msg: string) => filterInputValue = msg" />
-    <p class="p-20 text-center text-primary text-2xl" v-if="error">
+    <div class="flex justify-end mx-10 md:mx-120 lg:mx-60 my-5">
+      <button class="text-sm" @click="orderByTotalCases">Ordenar por total de casos</button>
+    </div>
+    <p v-if="error" class="p-20 text-center text-primary text-2xl">
       Desculpe, ocorreu um erro ao carregar os dados.
+    </p>
+    <p v-if="!filtered.length && items.length" class="p-20 text-center text-primary text-2xl">
+      Sem resultados para busca...
     </p>
     <template v-else>
       <li v-for="(item, i) in filtered " :key="i">
