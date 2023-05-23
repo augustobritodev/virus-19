@@ -5,7 +5,7 @@ import Hero from '../Hero.vue'
 
 describe('Hero', () => {
   it('renders properly', () => {
-    const wrapper = mount(Hero, { props: { msg: 'COVIDY' } })
-    expect(wrapper.text()).toContain('COVIDY')
+    const wrapper = mount(Hero, { props: { msg: 'Conheça o COVIDY' } })
+    expect(wrapper.text()).toContain('Conheça o COVIDY')
   })
 })

@@ -2,7 +2,7 @@
 import IconSearch from '@/components/icons/IconSearch.vue'
 
 import { type Data } from '@/types'
-import { computed, ref, defineExpose } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps({
   items: {
