@@ -39,12 +39,23 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 ## 🚀 Usage
 
-Before you start, make sure you have `Node.js` and you are using the version specified in `.node-version` file.
+Before you start, make sure you have `Node.js` and you are using the version specified in `.node-version` file, you can use [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://asdf-vm.com/) to manage your Node.js versions.
+
+```sh
+asdf shell nodejs $(cat .node-version | tr -d 'v')
+```
+
+or 
+
+```sh
+nvm use
+```
+
+Then install the dependencies:
 
 ```sh
 yarn install
 ```
-
 ### Compile and Hot-Reload for Development
 
 Run the following command to start a development server with hot-reloading.
